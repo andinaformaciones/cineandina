@@ -236,9 +236,56 @@ header{
   .preview-kicker{font-size:9px;padding:5px 9px}
   .preview-dots{display:none}
 }
+
+/* ===== BOTÓN VOLVER A PÁGINA PRINCIPAL ===== */
+header{
+  position:relative;
+}
+
+.boton-volver{
+  position:absolute;
+  top:18px;
+  left:24px;
+  z-index:10;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 15px;
+  border-radius:9px;
+  border:1px solid rgba(255,255,255,.20);
+  background:rgba(255,255,255,.10);
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  line-height:1.2;
+  box-shadow:0 4px 12px rgba(0,0,0,.16);
+  backdrop-filter:blur(5px);
+  -webkit-backdrop-filter:blur(5px);
+  transition:background .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+
+.boton-volver:hover{
+  background:rgba(255,255,255,.18);
+  transform:translateY(-1px);
+  box-shadow:0 6px 16px rgba(0,0,0,.24);
+}
+
+@media(max-width:768px){
+  .boton-volver{
+    top:14px;
+    left:16px;
+    padding:9px 12px;
+    font-size:13px;
+  }
+}
+
 </style></head><body>
 <header>
-  <div class="cine-header">
+  <a href="https://andinaformaciones.github.io/instituto/" class="boton-volver">
+    ← Ir a página principal
+  </a>
+    <div class="cine-header">
     <!-- LOGO: reemplaza únicamente la URL siguiente por el enlace de tu imagen -->
     <img class="cine-logo"
          src="https://i.ibb.co/XxZQKgJX/Copilot-20260605-194138.png"
@@ -499,5 +546,7 @@ function buscarVideos(){
 }
 cargar();
 </script></body></html>
+
+
 
 
